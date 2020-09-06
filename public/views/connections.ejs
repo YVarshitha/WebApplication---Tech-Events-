@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechTalks</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+</head>
+<body id="connectionLinksPage">
+    <%- include('partials/header.ejs') %>
+
+    <main>
+	<div class = "text">
+        <section>
+        <% for(i=0;i < categories.length;i++){ %>
+                <h2> <%= categories[i] %></h2>
+                 <ul class="Adv">
+                    <% for(j = 0; j< data.length;j++) { %>
+                        <% if(data[j].connectionTopic == categories[i]) { %> 
+                            <li><a href = "/connections/connection?id=<%= data[j].connectionId%>"> <%=data[j].connectionName%> </a></li>
+                         <%}%>
+                    <% } %>     
+                 </ul>
+            <% } %>
+            </section>
+	</div>
+    </main>
+    
+    <%- include('partials/footer.ejs') %>
+   
+</body>
+</html>

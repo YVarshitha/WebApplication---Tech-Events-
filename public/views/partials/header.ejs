@@ -1,0 +1,28 @@
+    <header class="var">
+        <div>
+        <div style="display:flex" class="Techtalkheader">
+            <a href="/"><img class="TechTalkLogo" src="../../assets/images/techtalksFINALcolor.jpg" alt="TechTalkImage"></a>
+			<h4>TechTalks</h4>			
+        </div>
+        <div class="nav1">
+			<ul class ="login">
+                <% if(session != undefined){%>
+                <li><a style="text-decoration:none" href = "/newConnection">Start a new connection</a></li>
+                <li><a style="text-decoration:none" href = "/userprofile/logout">Logout</a></li>
+                <li><a style="text-decoration:none" href = "/userprofile">My Connections</a></li>
+                <li><a style="text-align: right;"> Welcome <%= session.userId %></a></li>
+                <%}else{%>
+                    <li><a style="text-decoration:none" href = "/newConnection">Start a new connection</a></li>
+                    <li><a style="text-decoration:none" href = "/login">LogIn</a></li>
+                    <li><a style="text-decoration:none" href = "/signup">SignUp</a></li>
+                    <% }%>
+            </ul>
+        </div>
+        </div>
+        <div class="nav2">
+            <ul class="Connectionslinks">
+                <li><a style="text-decoration:none" href = "/connections">Connections</a></li>
+            </ul>
+        </div>
+    </header>
+

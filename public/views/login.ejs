@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechTalks</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+</head>
+<body id="loginPage">
+   
+        <%- include('partials/header.ejs') %>
+    <main>
+        <div class = "loginsection">
+        <h4>Login to explore your TechTalk Events! </h4><br><br>
+        <div class='errors'>
+            <% if(error){
+            error.forEach(function(err){%>
+            <div class="is_error">Error: <%= err.msg %></div> 
+            <%});
+            } %>
+            </div> 
+            <br>
+            <br>
+		<form class="loginForm" method = "POST" action="/userprofile/">
+            <div>
+                <label>User Name</label>
+                <input type="text" name="userId" placeholder="Enter Email" />
+            </div> 
+            <br>
+            <!-- <div>
+                <label>First Name</label>
+                <input type="text" name="firstname" placeholder="Enter First Name" />
+            </div> 
+            <br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastname" placeholder="Enter Last Name" />
+            </div> 
+            <br> -->
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Password" />
+            </div>
+            <br>
+            <br>
+            <div>
+                <button>Login</button>
+            </div>
+        </form>
+    </div>                
+    </main> 
+   
+        <%- include('partials/footer.ejs') %>    
+</body>
+</html>

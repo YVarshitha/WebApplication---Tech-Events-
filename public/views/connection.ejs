@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechTalks</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+</head>
+<body id="connectionPage">
+
+    <%- include('partials/header.ejs') %>  
+    <main>
+        <aside class="rsvpa">
+            <div >
+                <p>Are you going?</p>
+                <% if(session === undefined){ %>
+                <form action ="/login">            
+                <button style="cursor:pointer; color:green" class="buttionYes" onclick="window.location.href = '/login'">Yes</button>
+                <button style="cursor:pointer; color:red" class="buttonNo" onclick="window.location.href = '/login'">No</button>
+                <button style="cursor:pointer; color:blue" class="buttonMaybe" onclick="window.location.href = '/login'">Maybe</button>
+                </form>
+                <% } %>
+                <% if(session != undefined){ %>                     
+                    <button style="cursor:pointer; color:green" class="buttionYes" onclick="window.location.href = '/userprofile/rsvp?connectionId=<%= data[0].connectionId %>&userId=<%= session.userId %>&rsvp=Yes'">Yes</button>
+                    <button style="cursor:pointer; color:red" class="buttonNo" onclick="window.location.href = '/userprofile/rsvp?connectionId=<%= data[0].connectionId %>&userId=<%= session.userId %>&rsvp=No'">No</button>
+                    <button style="cursor:pointer; color:blue" class="buttonMaybe" onclick="window.location.href = '/userprofile/rsvp?connectionId=<%= data[0].connectionId %>&userId=<%= session.userId %>&rsvp=Maybe'">Maybe</button>
+                    <% } %>
+            </div>
+        </aside>
+	    <section>
+            <!-- <% console.log("connection page data to display", data[0].connectionName); %> -->
+            <div class="PenPcHeading"><h2><%= data[0].connectionName %></h2></div>
+            <img src="../assets/images/tech-talk.jpg" alt="5penpclogo" height= "150" width="150"> 
+            <div class ="Host">Hosted by <%= data[0].hostedBy %><br><%= data[0].date%><br>
+                <%= data[0].starttime%> - <%= data[0].endtime%><br><%= data[0].location%></div>
+            <div class="PenPcText">
+                <p>
+                    <strong>Details of Event:</strong><br>
+                    <%= data[0].connectionDetails %>
+                 </p>
+            </div>
+        </section>	   
+    </main>
+    
+    <%- include('partials/footer.ejs') %>
+    
+   
+</body>
+</html>

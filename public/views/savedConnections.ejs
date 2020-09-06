@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechTalks</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+</head>
+<body id="savedConnectionsPage">
+	<%- include('partials/header.ejs') %>
+    <main>
+		<% console.log('connections data to display',data); %>
+		<%if(data == undefined || data.length == 0){ %>
+			<p>There are no connections</p>
+			<% } else { %>
+	<div class="ConnectionList">
+	<table class="table1">
+		<tr>
+			<th>Connection</th>
+			<th>Category</th>
+			<th>Going?</th>
+			<th>Update/Delete</th>
+		</tr>
+		<%for(i = 0;i< data.length;i++){ %>
+		<tr>
+			<td><%=data[i].connectionName%></td>
+			<td><%=data[i].connectionTopic%></td>
+			<td><%=data[i].rsvp%></td>
+			
+			<td class="1">
+				<form action="/connections/update" method = "post" >
+				<a class="buttonUpdate" style ="color:rgb(0, 255, 221); cursor: pointer;" href = "/connections/connection?id=<%= data[i].connectionId %>&userid=<%= data[i].userId %>">Update</a>
+				<a href="/userProfile/delete?id=<%= data[i].connectionId %>&userid=<%= data[i].userId %>" class="buttonDelete" style =" cursor: pointer;">Delete</a>
+				</form>
+			</td>
+		</tr>
+		<%}%>
+	</table>
+	</div>
+	<%}%>    
+    </main>
+    
+    <%- include('partials/footer.ejs') %>
+   
+</body>
+</html>

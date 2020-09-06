@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTalks</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+    <main>
+        <div class="newconnectionform">
+        <p><strong>Create your Events!</strong></p>
+            <div class='errors'>
+            <% if(error){
+            error.forEach(function(err){%>
+            <div class="is_error">Error: <%= err.msg %></div> 
+            <%});
+            } %>
+            </div>
+            <br>
+    <form class="connectionForm" method ="post" action = '/userprofile/newconnection'>
+        <div>
+            <label>Topic</label>
+            <input type="text" name="topic" placeholder="Enter Topic" />
+        </div> 
+        <br>
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter Name" />
+        </div>
+        <br>
+        <div>
+            <label>Hosted By</label>
+            <input type="text" name="hostname" placeholder="Enter Host Name" />
+        </div>
+        <br>
+        <div>
+            <label>Details</label>
+            <input type="text" name="details" placeholder="Enter your details" />
+        </div>
+        <br>
+        <div>
+            <label>Location</label>
+            <input type="text" name="location" placeholder="Location" />
+        </div>  
+        <br>
+        <div>
+            <label>Date</label>
+            <input type="date" name="date"/>
+        </div>
+        <br>
+        <div>
+            <label> Start Time</label>
+            <input type="time" name="starttime"/>
+        </div>
+        <br>
+        <div>
+            <label> End Time</label>
+            <input type="time" name="endtime"/>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button>Create Connection</button>
+        </div>
+        
+    </form>
+</div>
+</main>
+<%- include('partials/footer.ejs') %>
+    
+</body>
+</html>

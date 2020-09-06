@@ -1,0 +1,271 @@
+ .var{
+	  color:black;
+	  background-color:rgb(112, 197, 190);
+	  margin-top:1px;
+	  width:99%;
+	  left:0;
+	  
+	 
+  }
+  header{
+
+    display:inline-block;
+    font-family: Helvetica,Arial, sans-serif;
+    box-sizing: content-box;  
+    padding: 30px 8px;
+    text-align: initial;
+	border: thin;
+	position: fixed;
+}
+
+h4{
+	display:inline;
+	/* margin-top: 25px; */
+}
+  
+ .Techtalkheader{
+	 float:left;
+     padding-left: 100px;
+	 font-size:40px;
+	 padding-right:100px;
+	 color:black;
+ }
+ 
+  .TechTalkLogo{
+      height: 100px;
+      width: 100px;
+	  position: absolute;
+	  left:10px;
+  }
+
+.nav1{
+    padding: 2px 20px;
+    border: thin ;
+	position: absolute;
+	margin-top: 80px;
+	right: 1px;
+    
+}
+  .login li{  
+  display: inline;
+  padding : 10px 20px;
+}
+
+.nav2{
+    padding: 2px 20px;
+    border: thin;
+	margin-top: 100px;
+	position:absolute;
+}
+
+.Connectionslinks li{
+	display:inline;
+}
+
+main{
+	  display:inline-block;
+	  font-family: Helvetica,Arial, sans-serif;
+	  box-sizing: content-box;
+	  padding-left: 10px;
+	  border: thin;
+	  padding-top: 200px ;
+}
+
+body{
+	overflow: visible;
+	margin-bottom: auto;
+}
+
+
+  .TechTalktext{
+    color: black;
+    text-align: center;
+	padding: 80px;
+}
+
+.footer {
+  display: flex;
+  padding:4px 0px;
+  position:fixed;
+  bottom:0;
+  background-color:rgb(112, 197, 190);
+  width:100%
+}
+
+.footerinfo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  float: left;
+}
+
+.footer li {
+  display:inline;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 4px;
+  list-style: none;
+}
+
+.Copyrightslogo {
+  font-family: sans-serif;
+}
+
+.fbtw
+{
+	padding-left: 600px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+   float: right;
+   padding-top: 3px;
+   
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  
+}
+
+
+/* Connection page */
+
+/* .5PenPcInfo{
+	 display: flex;
+	  position: absolute;
+	  left:5px;
+  } */
+/* .5penpcimg {
+	float:center;
+	 display:inline;
+	 height: 50px;
+     width: 50px;
+ }
+ .5penpcimg img{
+	float:center;
+	 display:inline;
+	 height: 50px;
+     width: 50px;
+	 padding: 0px 1px;
+ }
+ .5penpcimg{
+	float:center;
+	 display:inline;
+	 height: 50px;
+     width: 50px;
+	 padding: 0px 1px;
+ } */
+/*  .5PenPcTimings{
+	 display:inline;
+	 padding-top: 10px;
+	 padding-left:10px;
+ } */
+ .Now{
+	 float:center;
+ }
+ 
+ /* .5PenPcInfo{
+	 float:center;
+	 display:flex;
+	 flex=1;
+ } */
+ 
+ .rsvpa
+ {
+	 float:right;
+	 padding-right: 80px;
+	 padding-left: 800px;
+	 padding-top: 40px;
+	 position: fixed;
+
+	 
+ }
+ 
+ 
+ .RSVP ButtonYes, ButtonNo, ButtonMaybe{
+	 background-color: Red;
+ }
+ 
+ /*Saved Connections page*/
+ 
+ 
+ .table1{
+	 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	 border-collapse: collapse;
+	 width: 100%;
+	  padding-top: 12px;
+	 padding-bottom: 12px;
+	 text-align: left;
+ }
+ 
+ .ConnectionList{
+	 	    padding: 67px;
+ }
+ 
+ .text{
+	 padding: 50px;
+	 padding-bottom: 100px;
+ }
+ 
+ .starttext{
+	 text-align:"center"
+ }
+ 
+ .table2{
+ border-collapse:collapse;
+ border:none;
+ padding:0x;
+ }
+ 
+ .table1 td, th{
+	 border: 2px solid #ddd;
+	 padding: 8px;
+ }
+ 
+
+ 
+ .Host
+ {
+    position: relative;
+	left: 64px;
+	display: inline-block;
+	top:-65px;
+ }
+ 
+ .welcomenote{
+	 text-align: right;
+ }
+ 
+ .connectionForm {
+    /* margin-top: 70px; */
+	padding-left: 200px;
+	margin-bottom: 20px;
+}
+.newconnectionform{
+	margin-bottom: 20px;
+	padding-bottom: 60px;
+}
+
+.loginsection{
+	float: initial;
+	text-align: center;
+    padding-left: 278px;
+    padding-top: 76px;
+}
+
+
+
+ 
+ 
+ 
